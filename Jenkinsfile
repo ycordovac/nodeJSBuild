@@ -27,8 +27,9 @@ spec:
         defaultContainer 'shell'
       }
   }
+    stages {
 
-    stage ("Run API Test") {
+        stage ("Run API Test") {
             steps{
                 script {
                     if(fileExists("spring-boot-app")){
@@ -49,4 +50,3 @@ spec:
     }
   }
 }
-
