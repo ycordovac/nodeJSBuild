@@ -29,6 +29,12 @@ spec:
   }
     stages {
 
+        stage('Build app') {
+          steps {
+               sh 'npm install -g newman'
+          }
+        }
+
         stage ("Run API Test") {
             steps{
                 script {
