@@ -94,7 +94,7 @@ spec:
                         if(fileExists("spring-boot-app")){
                             sh 'rm -r spring-boot-app'
                         }
-                        sh 'git clone https://github.com/dberenguerdevcenter/spring-boot-app.git spring-boot-app --branch api-test-implementation'
+                        sh 'git clone https://github.com/ycordovac/spring-boot-app.git spring-boot-app --branch api-test-implementation'
                         sh 'newman run spring-boot-app/src/main/resources/bootcamp.postman_collection.json --reporters cli,junit --reporter-junit-export "newman/report.xml"'
                         junit "newman/report.xml"
 
